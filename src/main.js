@@ -4,6 +4,14 @@ import Vue from 'vue'
 import App from './App'
 import { routes } from './router/routes'
 
+import fIncrement from '@/components/vuex/fIncrement'
+import secondIncrement from '@/components/vuex/secondIncrement'
+import thirdIncrement from '@/components/vuex/thirdIncrement'
+import sIncrement from '@/components/vuex/sIncrement'
+import Main from '@/components/vuex/Main'
+
+import { store } from '@/components/Store/Store'
+
 import Router from 'vue-router'
 
 import VueFire from 'vuefire'
@@ -46,6 +54,13 @@ Vue.component('appDirective', Directives)
 Vue.component('appList', List)
 
 Vue.component('appUser', User)
+
+
+Vue.component('appFincrement', fIncrement)
+Vue.component('appSecondIncrement', secondIncrement)
+Vue.component('appThirdIncrement', thirdIncrement)
+Vue.component('appSincrement', sIncrement)
+Vue.component('appMain', Main)
 
 
 Vue.use(VueFire)
@@ -124,6 +139,7 @@ router.beforeEach((to, from, next) => {
 new Vue({
   el: '#app',
   router: router,
+  store,
   template: '<App/>',
   components: {
     App,

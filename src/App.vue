@@ -1,9 +1,11 @@
 <template>
   <div id="app" class="container-fluid">
 
-    <router-view name="header-top"></router-view>
+    <!-- <app-main></app-main> -->
+
+    <!-- <router-view name="header-top"></router-view>
     <router-view></router-view>
-    <router-view name="header-bottom"></router-view>
+    <router-view name="header-bottom"></router-view> -->
     <!-- <app-hello></app-hello> -->
 
     <!-- <app-form></app-form> -->
@@ -32,7 +34,7 @@
 
     <!-- <app-server v-for="server in 5" :key="server"></app-server> -->
 
-    <!-- <app-quote-main></app-quote-main> -->
+    <app-quote-main></app-quote-main>
   </div>
 </template>
 

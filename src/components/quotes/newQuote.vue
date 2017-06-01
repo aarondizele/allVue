@@ -3,8 +3,8 @@
     <form>
       <div class="col-sm-8 offset-sm-2 col-xs-12 col-md-6 offset-md-3 text-center form-group">
         <label>Quote</label>
-          <textarea class="form-control" rows="3" cols="500" v-model.trim="quote" placeholder="Write what on your mind"></textarea>
-        </div>
+        <textarea class="form-control" rows="3" cols="500" v-model.trim="quote" placeholder="Write what on your mind"></textarea>
+      </div>
       <div class="col-sm-8 offset-sm-2 col-xs-12 col-md-6 offset-md-3 form-group">
         <button type="submit" class="btn btn-outline-primary" @click.prevent="addQuote">Add Quote</button>
       </div>
