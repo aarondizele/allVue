@@ -15,10 +15,10 @@
           'increment',
           'decrement'
         ]),
-        increment (by) {
+        increment(by){
           this.$store.dispatch('increment', by)
         },
-        decrement (by) {
+        decrement(by){
           this.$store.dispatch('decrement', by)
         },
     }

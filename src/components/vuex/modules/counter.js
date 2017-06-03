@@ -12,7 +12,7 @@ const getters = {
 };
 
 const mutations = {
-  increment: (state, payload )=> {
+  increment: (state, payload) => {
     return state.counter += payload;
   },
   decrement: (state, payload) => {

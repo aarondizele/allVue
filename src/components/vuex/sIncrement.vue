@@ -21,3 +21,9 @@
 
 <style>
 </style>
+
+Vue.directive('highlight', {
+  bind(el, binding, vnode) => {
+    el.style.backgroundColor = binding.value;
+  }
+});

@@ -9,9 +9,8 @@ export const fruitsMixin = {
   },
   computed: {
       fruitFiltered () {
-        let matcher;
           return this.fruits.filter((value) => {
-          return matcher = value.toLowerCase().match(this.filterText.toLowerCase());
+            return value.toLowerCase().match(this.filterText.toLowerCase());
         });
       }
   },

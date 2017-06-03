@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="">
     <hr>
     <div class="col-xs-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 mt-4">
       <input type="text" class="form-control" placeholder="Search" v-model.trim='filterText'>

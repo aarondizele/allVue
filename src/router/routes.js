@@ -1,4 +1,5 @@
 import Header from '@/components/Header'
+import CountryApp from '@/components/countryApp'
 
 // lazy loading User Group
 const User = resolve => {
@@ -35,7 +36,8 @@ const Hello = resolve => {
 
 
 export const routes = [
-  { path: '/', name: 'hello', components: {
+  {path: '/', name: 'countryApp', component: CountryApp },
+  { path: '/hello', name: 'hello', components: {
     default: Hello,
     'header-top': Header
   } },

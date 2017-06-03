@@ -1,19 +1,19 @@
 <template>
-  <div id="app" class="container-fluid">
+  <div id="app" class="container">
 
     <!-- <app-main></app-main> -->
 
-    <!-- <router-view name="header-top"></router-view>
+    <router-view name="header-top"></router-view>
     <router-view></router-view>
-    <router-view name="header-bottom"></router-view> -->
+    <router-view name="header-bottom"></router-view>
     <!-- <app-hello></app-hello> -->
 
     <!-- <app-form></app-form> -->
 
     <!-- <app-transition></app-transition> -->
 
-    <!-- <app-directive></app-directive> -->
-    <!--  <app-list></app-list> -->
+    <!-- <app-directive></app-directive>
+    <app-list></app-list> -->
 
     <!-- <img src="./assets/logo.png">
     <hr>
@@ -34,7 +34,7 @@
 
     <!-- <app-server v-for="server in 5" :key="server"></app-server> -->
 
-    <app-quote-main></app-quote-main>
+    <!-- <app-quote-main></app-quote-main> -->
   </div>
 </template>
 
@@ -66,13 +66,12 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /*color: #2c3e50;*/
-}
-.container{
-  font-family: 'Roboto', Helvetica, Arial, sans-serif;
   color: #444;
-  margin: 0;
 }
 button{
   cursor: pointer;
+}
+input{
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
 }
 </style>

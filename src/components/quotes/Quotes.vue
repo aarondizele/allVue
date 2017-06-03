@@ -20,7 +20,7 @@ export default {
 </script>
 
 
-<style scoped>
+<style>
 button{
   cursor: pointer;
 }
@@ -28,6 +28,7 @@ button{
   font-family: 'Arizonia', cursive;
   font-size: 30px;
   color: #333;
+  width: 100%;
 }
 .quote{
   cursor: pointer;

@@ -4,6 +4,8 @@ import Vue from 'vue'
 import App from './App'
 import { routes } from './router/routes'
 
+import CountryApp from './components/countryApp';
+
 import fIncrement from '@/components/vuex/fIncrement'
 import secondIncrement from '@/components/vuex/secondIncrement'
 import thirdIncrement from '@/components/vuex/thirdIncrement'
@@ -70,6 +72,11 @@ Vue.http.options.root = 'https://laxistech-54e69.firebaseio.com/'
 
 Vue.config.productionTip = false
 
+Vue.filter('myNum', (value) => {
+  // return value.toLocaleString();
+  return (Math.round(value)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+});
+
 
 // let config = {
 //   apiKey: 'AIzaSyBeAdSk6zAkN7H03WgSmTjUFRwQQ-YZAew',
@@ -85,7 +92,7 @@ Vue.config.productionTip = false
 
 // let quotesRef = db.ref('notes')
 
-Vue.directive('highlight',{
+Vue.directive('highlight', {
 
   bind(el, binding, vnode){
     // el.style.color = 'yellow';
@@ -101,12 +108,10 @@ Vue.directive('highlight',{
         el.style.padding = 8 + 'px';
         el.style.color = 'white';
         el.style.borderRadius = 5 + 'px';
-      }else if (binding.arg == 'color') {
-        el.style.color = binding.value;
       }else{
         el.style.color = binding.value;
       }
-    } ,delay);
+    }, delay);
 
   }
 });
@@ -115,13 +120,13 @@ Vue.filter('toUpper', (value) => {
   return value.toUpperCase();
 })
 
-export const eventBus = new Vue({
-  methods: {
-    changeAge (age) {
-      this.$emit('ageWasEdit', age);
-    }
-  }
-});
+// export const eventBus = new Vue({
+//   methods: {
+//     changeAge (age) {
+//       this.$emit('ageWasEdit', age);
+//     }
+//   }
+// });
 
 Vue.use(Router);
 
@@ -143,5 +148,6 @@ new Vue({
   template: '<App/>',
   components: {
     App,
+    appCountry: CountryApp
   }
 })
